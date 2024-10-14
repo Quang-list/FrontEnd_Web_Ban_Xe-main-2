@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
+    <div class="col-lg-4">
+      <a href="" class="text-decoration-none">
+        <img src="assets/images/logo-xe-dap-mint-speed-white-1.png" class="logo" alt="Logo">
+      </a>
+    </div>
+    <div class="col-lg-4"></div> <!-- Cột trống để tạo khoảng cách -->
+    <div class="col-lg-4 d-flex justify-content-end">
+      <div class="text-right">
+        <p class="m-0">Dịch vụ Khách hàng</p>
+        <h5 class="m-0">+012 345 6789</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Topbar End -->
+
+<!-- Navbar Start -->
+<div class="container-fluid bg-dark mb-30">
+  <div class="row px-xl-5">
+    <div class="col-lg-3 d-none d-lg-block">
+      <a class="btn d-flex align-items-center justify-content-between bg-primary w-100" data-toggle="collapse"
+        href="#navbar-vertical" style="height: 65px; padding: 0 30px;">
+        <h4 class="text-dark m-0"><i class="fa fa-bars mr-2"></i>MINT SPEED</h4>
+      </a>
+    </div>
+    <div class="col-lg-9">
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
+        <a href="" class="text-decoration-none d-block d-lg-none">
+          <span class="h1 text-uppercase text-dark bg-light px-2">Multi</span>
+          <span class="h1 text-uppercase text-light bg-primary px-2 ml-n1">Shop</span>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+          <div class="navbar-nav mr-auto py-0">
+            <a class="nav-item nav-link" [routerLink]="['/']" routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            <a class="nav-link" [routerLink]="['/product']" routerLinkActive="active">Product</a>
+            <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active">About</a>
+            <a href="contact.html" class="nav-item nav-link" routerLinkActive="active">Contact</a>
+            <li class="nav-item" *ngIf="!isLogin">
+              <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active">Login</a>
+            </li>
+            <li class="nav-item" *ngIf="isLogin">
+              <button class="nav-link btn btn-link" (click)="onLogout()">Logout</button>
+            </li>
+            <li class="nav-item" *ngIf="isLogin" (mouseenter)="isDropdownVisible = true" (mouseleave)="isDropdownVisible = false">
+              <span class="nav-link">Hello, {{ userName }}</span>
+              <ul class="dropdown-menu" *ngIf="isDropdownVisible">
+                <li class="dropdown-item">
+                  <a href="/my-profile">My profile</a>
+                </li>
+                <li class="dropdown-item">Purchase order</li>
+                <li class="dropdown-item">Logout</li>
+              </ul>
+            </li>
+          </div>
+          <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
+            <a class="btn px-0 ml-3" [routerLink]="['/cart']">
+              <i class="fas fa-shopping-cart text-primary"></i>
+              <span class="badge text-secondary border border-secondary rounded-circle"
+                style="padding-bottom: 2px;">0</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>

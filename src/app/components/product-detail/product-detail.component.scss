@@ -1,0 +1,309 @@
+.product {
+  max-width: 1170px;
+  margin: 0 auto;
+
+  img {
+    height: 450px;
+  }
+
+  .product_detail-price {
+    display: flex;
+  }
+
+  .product_title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    clear: none;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .woocommerce div.product p.price,
+  .woocommerce div.product span.price {
+    color: #dc3545;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .product-showroom .front-main-cat-item {
+    display: flex;
+    /* Sử dụng flexbox để căn chỉnh */
+    flex-direction: column;
+    /* Sắp xếp các phần tử theo cột */
+    align-items: center;
+    /* Căn giữa theo chiều ngang */
+    justify-content: center;
+    /* Căn giữa theo chiều dọc */
+    text-align: center;
+    /* Căn giữa văn bản */
+    width: 100%;
+    padding-top: 15px;
+    background: #eee;
+    min-height: 150px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    /* Kích thước chữ */
+    line-height: 1.5;
+    /* Khoảng cách dòng */
+  }
+
+  .product-showroom .front-main-cat-item h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    /* Giảm kích thước chữ */
+    font-weight: 500 !important;
+    line-height: 1.5;
+    background: #eee;
+  }
+
+
+  .front-main-cat-item img.img-feater {
+    max-width: 50px;
+    max-height: 50px;
+    padding: 0;
+  }
+}
+
+.price {
+
+  // Định dạng giá gốc (giá bị gạch ngang)
+  del {
+    color: #6c757d; // Màu xám cho giá gốc
+    font-size: 20px; // Kích thước font cho giá gốc
+    font-weight: normal;
+    text-decoration: line-through; // Gạch ngang giá gốc
+    margin-right: 10px; // Khoảng cách giữa giá gốc và giá hiện tại
+  }
+
+  // Định dạng giá hiện tại (giá đã giảm)
+  ins {
+    color: #dc3545; // Màu đỏ cho giá hiện tại
+    font-size: 25px; // Kích thước font cho giá hiện tại
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-decoration: none; // Loại bỏ gạch chân cho giá hiện tại
+  }
+}
+
+.product_detail-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap; // Đảm bảo không quấn dòng, các phần tử vẫn nằm trên cùng một dòng
+  gap: 60px; // Khoảng cách giữa các phần tử
+}
+
+.stock.in-stock {
+  color: #CDC673; // Màu xanh cho trạng thái còn hàng
+  font-size: 20px;
+}
+
+.single_add_to_cart_button {
+  background-color: #007bff;
+  /* Màu xanh nước biển */
+  color: white;
+  /* Màu chữ trắng */
+  border: none;
+  /* Bỏ viền */
+  padding: 10px 20px;
+  /* Điều chỉnh kích thước nút */
+  border-radius: 5px;
+  /* Bo góc nút */
+  cursor: pointer;
+  /* Đổi con trỏ khi hover */
+  width: 100%;
+  /* Chiếm toàn bộ chiều rộng của form */
+  box-sizing: border-box;
+  /* Đảm bảo padding không làm tăng kích thước */
+}
+
+.single_add_to_cart_button:hover {
+  background-color: #0056b3;
+  /* Màu đậm hơn khi hover */
+}
+
+.product-img-l {
+  padding-left: 0;
+  /* Bỏ padding bên trái */
+  margin-left: 0;
+  /* Bỏ margin bên trái */
+}
+
+.product-title {
+  margin: 0;
+  /* Bỏ margin của tiêu đề sản phẩm */
+}
+
+.price,
+.stock,
+.product-short-description {
+  margin-left: 0;
+  /* Bỏ margin bên trái cho các phần khác */
+  padding-left: 0;
+  /* Bỏ padding bên trái cho các phần khác */
+}
+
+.woocommerce-product-details__short-description {
+  text-align: left;
+  /* Căn chỉnh nội dung về lề bên trái */
+  margin-top: 20px;
+  /* Thêm khoảng cách phía trên */
+}
+
+.product-short-description p {
+  margin: 0;
+  /* Bỏ margin */
+  padding-left: 0;
+  /* Bỏ padding bên trái */
+}
+
+.head-pr {
+  background: #FFF68F;
+  text-align: center;
+  color: #000000;
+  padding: 10px;
+  text-transform: uppercase;
+  margin: 30px 0 20px;
+  /* Thay đổi giá trị margin-top để tạo khoảng cách với phần trên */
+  border-bottom: 4px double;
+}
+
+.head-pr h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+h1,
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content-pro h2 {
+  text-align: left;
+  /* Căn lề trái cho thẻ h2 */
+  width: 100%;
+  /* Đảm bảo h2 chiếm toàn bộ chiều rộng */
+}
+
+.content-pro {
+  display: block;
+  /* Đảm bảo phần tử cha không ảnh hưởng đến các phần tử con */
+}
+
+.content-pro img {
+  display: block;
+  margin: 0 auto;
+  /* Căn giữa ảnh */
+  max-width: 100%;
+  /* Đảm bảo ảnh không vượt quá kích thước container */
+  height: auto;
+}
+
+.product-short-description {
+  max-width: 400px;
+  /* Đặt chiều rộng tối đa nhỏ hơn */
+  font-size: 14px;
+  /* Giảm kích cỡ chữ nếu cần */
+  line-height: 1.5;
+  /* Khoảng cách giữa các dòng */
+  padding: 10px;
+  /* Thêm khoảng đệm nếu muốn */
+  border: 1px solid #ddd;
+  /* Viền bao quanh nếu cần */
+}
+
+////Colos
+.color-options {
+  display: flex;
+  /* Hiển thị nút theo hàng ngang */
+  flex-wrap: wrap;
+  /* Nếu có quá nhiều nút, chúng sẽ tự động xuống dòng */
+  gap: 5px;
+  /* Khoảng cách giữa các nút */
+  margin-top: 10px;
+  /* Khoảng cách phía trên */
+}
+
+.color-button {
+  padding: 5px 10px;
+  /* Kích thước nút */
+  font-size: 14px;
+  /* Cỡ chữ */
+  border: 1px solid #ddd;
+  background-color: #f0f0f0;
+  /* Màu nền mặc định */
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: background-color 0.3s;
+}
+
+.color-button:hover {
+  background-color: #ddd;
+  /* Màu nền khi hover */
+}
+
+.stock.in-stock {
+  margin-top: 20px;
+  /* Tạo khoảng cách giữa phần màu sắc và trạng thái */
+  font-size: 16px;
+  /* Kích thước chữ cho trạng thái */
+  color: green;
+  /* Màu chữ nếu sản phẩm có trạng thái */
+}
+
+.color-options {
+  display: flex; // Hoặc inline-block
+  gap: 10px; // Khoảng cách giữa các nút
+
+  .color-button {
+    border: 2px solid transparent; // Viền mặc định
+    cursor: pointer;
+    padding: 10px; // Padding cho nút
+    transition: border-color 0.3s ease; // Hiệu ứng chuyển tiếp
+
+    &.selected {
+      border-color: blue; // Màu viền cho nút được chọn
+    }
+
+    // Đảm bảo tất cả nút đều hiển thị
+    display: inline-flex; // Hoặc flex để tránh vấn đề ẩn
+    align-items: center; // Canh giữa nội dung
+  }
+}
+
+.product-description {
+  .other-detail {
+    margin: 20px 0; // Tùy chỉnh khoảng cách giữa các phần tử
+  }
+
+  .image {
+    width: 100%;  /* Chiều rộng ảnh chiếm toàn bộ không gian chứa */
+    max-width: 800px; // Giới hạn chiều rộng tối đa
+    height: auto; // Đảm bảo chiều cao tự điều chỉnh theo tỷ lệ khung hình
+    object-fit: cover; // Đảm bảo ảnh không bị biến dạng
+    margin: 0 auto 20px; // Căn giữa khung chứa và khoảng cách giữa ảnh và phần tử khác
+    display: flex; // Để hỗ trợ căn giữa theo chiều ngang nếu cần
+    justify-content: center; // Căn giữa nội dung bên trong theo chiều ngang
+  }
+
+  .product-image {
+    width: 100%; /* Đảm bảo hình ảnh chiếm hết chiều rộng của khung chứa */
+    height: auto; /* Chiều cao tự động theo tỉ lệ */
+    object-fit: cover; /* Giúp hình ảnh không bị méo khi thay đổi kích thước */
+    display: block; /* Đảm bảo rằng ảnh là phần tử block */
+    margin: 0 auto; /* Căn giữa hình ảnh */
+  }
+}

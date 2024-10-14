@@ -1,0 +1,17 @@
+.contact_section {
+  background-color: #DDDDDD;
+  /* Màu nền cam (giữ nguyên nếu cần) */
+  padding: 60px 0;
+  /* Đệm trên và dưới */
+}
+
+.alert-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.alert {
+  width: 60%;
+  font-size: 18px;
+}

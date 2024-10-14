@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Breadcrumb Start -->
+<div class="container-fluid">
+  <div class="row px-xl-5">
+    <div class="col-12">
+      <nav class="breadcrumb bg-light mb-30">
+        <a class="breadcrumb-item text-dark" href="#">Home</a>
+        <span class="breadcrumb-item active">My profile</span>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="container grid">
+  <div class="col-span-2 epUsgf">
+    <div class="u6SDuY">
+      <a class="w37kB7" href="/user/account/profile">
+        <div class="shopee-avatar">
+          <div class="shopee-avatar__placeholder">
+            <svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0"
+              class="shopee-svg-icon icon-headshot">
+              <g>
+                <circle cx="7.5" cy="4.5" fill="none" r="3.8" stroke="#DCDCDC" stroke-width="2" stroke-miterlimit="10">
+                </circle>
+                <path d="m1.5 14.2c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="none" stroke="#DCDCDC" stroke-linecap="round"
+                  stroke-miterlimit="10" stroke-width="2"></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </a>
+      <div class="vDMlrj">
+        <div class="HtUK6o">{{myProfile.name}}</div>
+        <div>
+          <a class="Kytn1s" href="/user/account/profile">
+            <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"
+              style="margin-right: 4px;">
+              <path d="M8.54 0L6.987 1.56l3.46 3.48L12 3.48M0 8.52l.073 3.428L3.46 12l6.21-6.18-3.46-3.48"
+                fill="#9B9B9B" fill-rule="evenodd"></path>
+            </svg>
+            Sửa hồ sơ
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="WDmP96">
+      <!-- <div class="stardust-dropdown">
+        <div class="stardust-dropdown__item-header"><a class="jHbobZ" href="/m/1010">
+            <div class="U7dHrp"><img src="https://down-vn.img.susercontent.com/file/sg-11134004-7rdyf-m0k9z60zcg9x5b">
+            </div>
+            <div class="mY8KSl"><span class="fnmbfn">10.10 Đại Tiệc Thương Hiệu</span></div>
+          </a></div>
+      </div> -->
+      <div class="stardust-dropdown stardust-dropdown--open">
+        <div class="stardust-dropdown__item-header"><a class="jHbobZ" href="/user/account/profile">
+            <div class="U7dHrp"><img src="https://down-vn.img.susercontent.com/file/ba61750a46794d8847c3f463c5e71cc4">
+            </div>
+            <div class="mY8KSl"><span class="fnmbfn">Tài khoản của tôi</span></div>
+          </a></div>
+        <div class="stardust-dropdown__item-body stardust-dropdown__item-body--open">
+          <div class="hGOWVP">
+            <a class="HVZpoT VfX643" href="/user/account/profile">
+              <span class="PcLlJr">Hồ sơ</span>
+            </a>
+            <a class="HVZpoT" href="/user/account/payment">
+              <span class="PcLlJr">Ngân hàng</span>
+            </a>
+            <a class="HVZpoT" (click)="navigateToAddress()">
+              <span class="PcLlJr">Địa chỉ</span>
+            </a>
+            <a class="HVZpoT" href="/user/account/password">
+              <span class="PcLlJr">Đổi mật khẩu</span>
+            </a>
+            <a class="HVZpoT" href="/user/setting/notification/">
+              <span class="PcLlJr">Cài đặt thông báo</span>
+            </a>
+            <a class="HVZpoT" href="/user/setting/privacy">
+              <span class="PcLlJr">Những thiết lập riêng tư</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="stardust-dropdown">
+        <div class="stardust-dropdown__item-header"><a class="jHbobZ" href="/user/purchase">
+            <div class="U7dHrp"><img src="https://down-vn.img.susercontent.com/file/f0049e9df4e536bc3e7f140d071e9078">
+            </div>
+            <div class="mY8KSl"><span class="fnmbfn">Đơn Mua</span></div>
+          </a></div>
+        <div class="stardust-dropdown__item-body">
+          <div class="hGOWVP"></div>
+        </div>
+      </div>
+      <div class="stardust-dropdown">
+        <div class="stardust-dropdown__item-header"><a class="jHbobZ" href="/user/notifications/order">
+            <div class="U7dHrp"><img src="https://down-vn.img.susercontent.com/file/e10a43b53ec8605f4829da5618e0717c">
+            </div>
+            <div class="mY8KSl"><span class="fnmbfn">Thông báo</span></div>
+          </a></div>
+        <div class="stardust-dropdown__item-body">
+          <div class="hGOWVP"><a class="HVZpoT" href="/user/notifications/order"><span class="PcLlJr">Cập nhật đơn
+                hàng</span></a><a class="HVZpoT" href="/user/notifications/promotion"><span class="PcLlJr">Khuyến
+                mãi</span></a><a class="HVZpoT" href="/user/notifications/wallet"><span class="PcLlJr">Cập nhật
+                Ví</span></a><a class="HVZpoT" href="/user/notifications/shopee"><span class="PcLlJr">Cập nhật
+                Shopee</span></a></div>
+        </div>
+      </div>
+      <div class="stardust-dropdown">
+        <div class="stardust-dropdown__item-header"><a class="jHbobZ" href="/user/voucher-wallet">
+            <div class="U7dHrp"><img src="https://down-vn.img.susercontent.com/file/84feaa363ce325071c0a66d3c9a88748">
+            </div>
+            <div class="mY8KSl"><span class="fnmbfn">Kho Voucher</span></div>
+          </a></div>
+        <div class="stardust-dropdown__item-body">
+          <div class="hGOWVP"></div>
+        </div>
+      </div>
+      <!-- <div class="stardust-dropdown">
+        <div class="stardust-dropdown__item-header"><a class="jHbobZ" href="/user/coin">
+            <div class="U7dHrp"><img src="https://down-vn.img.susercontent.com/file/a0ef4bd8e16e481b4253bd0eb563f784">
+            </div>
+            <div class="mY8KSl"><span class="fnmbfn">Shopee Xu</span></div>
+          </a></div>
+        <div class="stardust-dropdown__item-body">
+          <div class="hGOWVP"></div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <div class="col-span-3">
+    <div class="col-span-56">
+      <div class="SFztPl">
+        <h1 class="BVrKV_">Hồ sơ của tôi</h1>
+        <div class="QcW5xy">Quản lý thông tin hồ sơ để bảo mật tài khoản</div>
+      </div>
+    </div>
+    <div class="row-forms1">
+      <div class="col-span-33 row-span-1 row-start-1">
+        <div class="HrBg9Q">
+          <form (ngSubmit)="updateUser()">
+            <table class="bQkdAY">
+              <tr>
+                <td class="f1ZOv_"><label>Tên đăng nhập</label></td>
+                <td class="o6L4e0">
+                  <div class="e_Vt__">
+                    <div class="PBfYlq">{{myProfile.name}}</div>
+                    <button type="button" class="clo49Q"></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="f1ZOv_"><label>Tên</label></td>
+                <td class="o6L4e0">
+                  <div>
+                    <div class="NGoa5Z">
+                      <input type="text" class="kKnR04" [(ngModel)]="myProfile.name" name="name">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="f1ZOv_"><label>Email</label></td>
+                <td class="o6L4e0">
+                  <div class="e_Vt__">
+                    <div class="PBfYlq">
+                      <input type="email" class="kKnR04" [(ngModel)]="myProfile.email" name="email">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="f1ZOv_"><label>Số điện thoại</label></td>
+                <td class="o6L4e0">
+                  <div class="e_Vt__">
+                    <div class="PBfYlq">
+                      <input type="text" class="kKnR04" [ngModel]="maskPhoneNumber(myProfile.phone)"
+                        (ngModelChange)="myProfile.phone = $event" name="phone">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="f1ZOv_"><label>Giới tính</label></td>
+                <td class="o6L4e0">
+                  <div class="prDHtK">
+                    <div class="stardust-radio-group" role="radiogroup">
+                      <label class="stardust-radio" role="radio">
+                        <input type="radio" [(ngModel)]="myProfile.gender" value="Nam" name="gender"
+                          style="display: none;"> <!-- Ẩn input radio thực -->
+                        <div class="stardust-radio-button">
+                          <div class="stardust-radio-button__outer-circle">
+                            <div class="stardust-radio-button__inner-circle"
+                              [class.active]="myProfile.gender === 'Nam'"></div>
+                          </div>
+                        </div>
+                        <div class="stardust-radio__content">
+                          <div class="stardust-radio__label">Nam</div>
+                        </div>
+                      </label>
+                      <label class="stardust-radio" role="radio">
+                        <input type="radio" [(ngModel)]="myProfile.gender" value="Nu" name="gender"
+                          style="display: none;"> <!-- Ẩn input radio thực -->
+                        <div class="stardust-radio-button">
+                          <div class="stardust-radio-button__outer-circle">
+                            <div class="stardust-radio-button__inner-circle" [class.active]="myProfile.gender === 'Nu'">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="stardust-radio__content">
+                          <div class="stardust-radio__label">Nữ</div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="f1ZOv_"><label>Ngày sinh</label></td>
+                <td class="o6L4e0">
+                  <div class="BWTNUj">
+                    <div class="LFFx8j ZSBTIH">
+                      <input type="number" [(ngModel)]="day" name="day" placeholder="Ngày" />
+                    </div>
+                    <div class="LFFx8j ZSBTIH">
+                      <input type="number" [(ngModel)]="month" name="month" placeholder="Tháng" />
+                    </div>
+                    <div class="LFFx8j ZSBTIH">
+                      <input type="number" [(ngModel)]="year" name="year" placeholder="Năm" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="f1ZOv_"><label>Thành phố</label></td>
+                <td class="o6L4e0">
+                  <div>
+                    <div class="NGoa5Z">
+                      <input type="text" class="kKnR04" [(ngModel)]="myProfile.city" name="city">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <div class="f1ZOv" style="padding-top: 30px;">
+              <button type="submit" class="clo49Q">Lưu thay đổi</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-span-22 row-span-1 col-start-4 row-start-1">
+        <div class="nv7bOz">
+          <div class="TJWfNh">
+            <div class="nMPYiw" role="header">
+              <div class="gQ6nuc">
+                <img *ngIf="image" [src]="environment.apiUrl + image" alt="User Image" class="user-image" />
+                <svg *ngIf="!image" enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0"
+                  class="shopee-svg-icon BJDAci icon-headshot">
+                  <g>
+                    <circle cx="7.5" cy="4.5" fill="none" r="3.8" stroke-miterlimit="10"></circle>
+                    <path d="m1.5 14.2c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="none" stroke-linecap="round"
+                      stroke-miterlimit="10"></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <button type="button" class="btn btn-light btn--m btn--inline" (click)="fileInput.click()">Chọn ảnh</button>
+            <input type="file" #fileInput accept=".jpeg, .png" (change)="onFileSelected($event)" style="display: none;">
+            <div class="T_8sqN">
+              <div class="JIExfq">Dụng lượng file tối đa 1 MB</div>
+              <div class="JIExfq">Định dạng: .JPEG, .PNG</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
