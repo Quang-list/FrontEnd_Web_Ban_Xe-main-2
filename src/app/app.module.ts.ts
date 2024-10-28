@@ -23,6 +23,9 @@ import { MyProfileComponent } from './components/my-profile/my-profile.component
 import { FormsModule } from '@angular/forms';
 import { AddressComponent } from './components/address/address.component';
 import { RegisterComponent } from './components/register/register.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { CreateEmployeeComponent } from './admin-panel/create-employee/create-employee.component';
+import { EmployeeListComponent } from './admin-panel/employee-list/employee-list.component';
 
 export function jwtOptionsFactory() {
   return {
@@ -51,8 +54,12 @@ export function jwtOptionsFactory() {
     MyProfileComponent,
     AboutComponent,
     AddressComponent,
-    RegisterComponent
+    RegisterComponent,
+    AdminLoginComponent,
+    CreateEmployeeComponent,
+    EmployeeListComponent,
   ],
+
   imports: [
     BrowserModule,
     CommonModule,
@@ -71,8 +78,8 @@ export function jwtOptionsFactory() {
   providers: [
     JwtHelperService,
     SlideService,
-    PriceRangePipe
+    PriceRangePipe,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

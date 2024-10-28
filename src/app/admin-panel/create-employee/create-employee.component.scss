@@ -1,0 +1,80 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.text-danger {
+    font-size: 0.875rem;
+}
+
+.btn-secondary {
+    background-color: #6c757d; // Màu nền chính
+    border: none; // Bỏ viền
+    transition: background-color 0.3s ease; // Hiệu ứng chuyển màu
+
+    &:hover {
+        background-color: #5a6268; // Màu nền khi hover
+        color: #fff; // Màu chữ khi hover
+    }
+
+    &:focus {
+        outline: none; // Bỏ viền focus
+    }
+}
+
+.btn-lg {
+    padding: 10px 20px; // Tăng khoảng cách bên trong
+    font-size: 1.2rem; // Tăng kích thước chữ
+}
+
+.text-center {
+    text-align: center; // Căn giữa nội dung
+}
+
+.mt-3 {
+    margin-top: 20px; // Tạo khoảng cách giữa nút "Back" và nút "Tạo Nhân Viên"
+}
+
+.btn-back {
+    // Tạo khoảng cách bên trái
+    margin-top: 10px; // Tạo khoảng cách phía trên
+    padding: 10px 20px; // Tăng độ rộng và chiều cao của nút
+    font-size: 16px; // Tăng kích thước chữ
+    border-radius: 5px; // Bo tròn góc nút
+    background-color: rgb(231, 231, 37);
+}
+
+.create-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+
+    i {
+        margin-right: 8px;
+        /* Khoảng cách giữa icon và chữ */
+    }
+
+    &:hover {
+        background-color: #7e8286;
+        /* Màu xanh đậm hơn khi hover */
+        transform: scale(1.05);
+        /* Hiệu ứng phóng to nhẹ */
+    }
+
+    &:active {
+        background-color: #83878b;
+        /* Màu khi nhấn */
+        transform: scale(0.95);
+        /* Thu nhỏ nhẹ khi nhấn */
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    }
+}

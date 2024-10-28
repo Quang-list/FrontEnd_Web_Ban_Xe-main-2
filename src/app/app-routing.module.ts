@@ -10,6 +10,11 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { AddressComponent } from './components/address/address.component';
 import { RegisterComponent } from './components/register/register.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { CreateEmployeeComponent } from './admin-panel/create-employee/create-employee.component';
+import { EmployeeListComponent } from './admin-panel/employee-list/employee-list.component';
+
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'about', component: AboutComponent },
@@ -21,7 +26,11 @@ const routes: Routes = [
     { path: 'my-profile', component: MyProfileComponent },
     { path: 'user/account/address', component: AddressComponent },
     { path: 'register', component: RegisterComponent },
-];
+    { path: 'admin-login', component: AdminLoginComponent },
+    { path: 'admin-panel', component: AdminPanelComponent },
+    { path: 'employees', component: EmployeeListComponent }, // Trang danh sách nhân viên
+    { path: 'employees/create', component: CreateEmployeeComponent }, // Trang tạo nhân viên
+]
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
