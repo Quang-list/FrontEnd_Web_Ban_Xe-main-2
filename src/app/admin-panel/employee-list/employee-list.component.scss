@@ -1,5 +1,5 @@
 .container {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .table {
@@ -39,11 +39,43 @@
     }
 }
 
-.btn-back {
-    margin-left: 15px; // Tạo khoảng cách bên trái
-    margin-top: 10px; // Tạo khoảng cách phía trên
-    padding: 10px 20px; // Tăng độ rộng và chiều cao của nút
-    font-size: 16px; // Tăng kích thước chữ
-    border-radius: 5px; // Bo tròn góc nút
-    background-color: rgb(231, 231, 37);
+#sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    flex: 1;
+}
+
+.list-group-item {
+    transition: background-color 0.2s;
+}
+
+.list-group-item:hover {
+    background-color: #1b1e21;
+}
+
+.sidebar-heading {
+    font-size: 1.5rem;
+    /* Kích thước chữ lớn hơn */
+    font-weight: bold;
+    /* Làm đậm chữ */
+    text-align: center;
+    /* Canh giữa */
+    padding: 15px;
+    /* Thêm khoảng cách xung quanh */
+    background-color: #343a40;
+    /* Màu nền tương tự như sidebar */
+    border-bottom: 2px solid #727880;
+    /* Đường viền dưới màu xanh dương */
+    margin-bottom: 10px;
+    /* Khoảng cách dưới */
+    letter-spacing: 1px;
+}
+
+#wrapper {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    /* Xóa khoảng cách thừa */
 }

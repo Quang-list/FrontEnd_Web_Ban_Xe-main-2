@@ -1,80 +1,118 @@
+.list-group-item {
+    font-size: 1rem;
+    padding: 15px 20px;
+    border: none;
+    color: white;
+    background-color: #343a40;
+}
+
+.list-group-item:hover {
+    background-color: #495057;
+    transition: background-color 0.2s;
+}
+
+.list-group-item i {
+    margin-right: 10px;
+}
+
+/* Main content container */
 .container {
-    max-width: 600px;
-    margin: auto;
+    padding: 2rem;
+    flex-grow: 1;
+    background-color: #f8f9fa;
 }
 
-.text-danger {
-    font-size: 0.875rem;
+
+/* Form styling */
+.form-group {
+    margin-bottom: 0.75rem;
+    /* Giảm khoảng cách giữa các trường */
 }
 
-.btn-secondary {
-    background-color: #6c757d; // Màu nền chính
-    border: none; // Bỏ viền
-    transition: background-color 0.3s ease; // Hiệu ứng chuyển màu
-
-    &:hover {
-        background-color: #5a6268; // Màu nền khi hover
-        color: #fff; // Màu chữ khi hover
-    }
-
-    &:focus {
-        outline: none; // Bỏ viền focus
-    }
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem;
+    margin: 0;
 }
 
-.btn-lg {
-    padding: 10px 20px; // Tăng khoảng cách bên trong
-    font-size: 1.2rem; // Tăng kích thước chữ
-}
-
-.text-center {
-    text-align: center; // Căn giữa nội dung
-}
-
-.mt-3 {
-    margin-top: 20px; // Tạo khoảng cách giữa nút "Back" và nút "Tạo Nhân Viên"
-}
-
-.btn-back {
-    // Tạo khoảng cách bên trái
-    margin-top: 10px; // Tạo khoảng cách phía trên
-    padding: 10px 20px; // Tăng độ rộng và chiều cao của nút
-    font-size: 16px; // Tăng kích thước chữ
-    border-radius: 5px; // Bo tròn góc nút
-    background-color: rgb(231, 231, 37);
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
 }
 
 .create-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 1rem;
     padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    width: 50%;
+    background-color: #ffc107;
+    color: #343a40;
+    border: none;
+    border-radius: 5px;
+}
 
-    i {
-        margin-right: 8px;
-        /* Khoảng cách giữa icon và chữ */
-    }
+.alert {
+    font-size: 1rem;
+}
 
-    &:hover {
-        background-color: #7e8286;
-        /* Màu xanh đậm hơn khi hover */
-        transform: scale(1.05);
-        /* Hiệu ứng phóng to nhẹ */
-    }
 
-    &:active {
-        background-color: #83878b;
-        /* Màu khi nhấn */
-        transform: scale(0.95);
-        /* Thu nhỏ nhẹ khi nhấn */
-    }
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 1rem;
+    text-align: center;
+    /* Căn giữa chữ */
+}
 
-    &:focus {
-        outline: none;
-        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-    }
+#wrapper {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    /* Xóa khoảng cách thừa */
+}
+
+
+#sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    flex: 1;
+}
+
+.list-group-item {
+    transition: background-color 0.2s;
+}
+
+.list-group-item:hover {
+    background-color: #1b1e21;
+}
+
+.sidebar-heading {
+    font-size: 1.5rem;
+    /* Kích thước chữ lớn hơn */
+    font-weight: bold;
+    /* Làm đậm chữ */
+    text-align: center;
+    /* Canh giữa */
+    padding: 15px;
+    /* Thêm khoảng cách xung quanh */
+    background-color: #343a40;
+    /* Màu nền tương tự như sidebar */
+    border-bottom: 2px solid #727880;
+    /* Đường viền dưới màu xanh dương */
+    margin-bottom: 10px;
+    /* Khoảng cách dưới */
+    letter-spacing: 1px;
+}
+
+#wrapper {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    /* Xóa khoảng cách thừa */
 }

@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-create-employee',
   templateUrl: './create-employee.component.html',
@@ -57,5 +58,12 @@ export class CreateEmployeeComponent implements OnInit {
   }
   navigateToAdminPanel(): void {
     this.router.navigate(['admin-panel']); // Điều hướng đến admin-panel
+  }
+  onLogout() {
+    localStorage.removeItem('token'); // Xóa token khỏi local storage
+    this.router.navigate(['/admin-login']); // Chuyển hướng về trang đăng nhập
+  }
+  navigateTo(route: string): void {
+    this.router.navigate([route]);
   }
 }

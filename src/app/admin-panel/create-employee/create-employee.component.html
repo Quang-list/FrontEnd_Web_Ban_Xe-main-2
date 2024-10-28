@@ -1,38 +1,54 @@
-<div class="container">
-    <h1>Tạo Nhân Viên</h1>
-
-    <div *ngIf="registerMessage" class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>{{ registerMessage }}</strong>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-dark border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading text-white">Admin Panel</div>
+        <div class="list-group list-group-flush">
+            <button (click)="navigateTo('employees/create')"
+                class="list-group-item list-group-item-action bg-dark text-white">
+                <i class="bi bi-person-plus-fill"></i> Tạo Nhân Viên
+            </button>
+            <button (click)="navigateTo('employees')" class="list-group-item list-group-item-action bg-dark text-white">
+                <i class="bi bi-people-fill"></i> Danh Sách Nhân Viên
+            </button>
+            <button (click)="onLogout()" class="list-group-item list-group-item-action bg-dark text-white">
+                <i class="bi bi-box-arrow-right"></i> Đăng Xuất
+            </button>
+        </div>
     </div>
+    <div class="container">
+        <h1>Tạo Nhân Viên</h1>
 
-    <form [formGroup]="employeeForm" (ngSubmit)="onCreate()">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Tên" formControlName="name" />
+        <div *ngIf="registerMessage" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{ registerMessage }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-        <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email" formControlName="email" />
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control" placeholder="Mật Khẩu" formControlName="password" />
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Địa Chỉ" formControlName="address" />
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Thành Phố" formControlName="city" />
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Số Điện Thoại" formControlName="phone" />
-        </div>
-        <div class="form-group">
-            <input type="date" class="form-control" formControlName="dateOfBirth" />
-        </div>
-        <button type="submit" class="btn btn-primary create-btn mx-auto d-block">
-            <i class="bi bi-person-plus"></i> Tạo Nhân Viên
-        </button>
-    </form>
-    <div class="d-flex justify-content-between">
-        <button (click)="navigateToAdminPanel()" class="btn btn-secondary btn-back">Back</button>
+
+        <form [formGroup]="employeeForm" (ngSubmit)="onCreate()">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Tên" formControlName="name" />
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" formControlName="email" />
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Mật Khẩu" formControlName="password" />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Địa Chỉ" formControlName="address" />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Thành Phố" formControlName="city" />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Số Điện Thoại" formControlName="phone" />
+            </div>
+            <div class="form-group">
+                <input type="date" class="form-control" formControlName="dateOfBirth" />
+            </div>
+            <button type="submit" class="btn btn-primary create-btn mx-auto d-block">
+                <i class="bi bi-person-plus"></i> Tạo Nhân Viên
+            </button>
+        </form>
+
     </div>
 </div>

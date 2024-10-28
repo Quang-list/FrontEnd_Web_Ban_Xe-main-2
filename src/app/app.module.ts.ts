@@ -58,6 +58,7 @@ export function jwtOptionsFactory() {
     AdminLoginComponent,
     CreateEmployeeComponent,
     EmployeeListComponent,
+
   ],
 
   imports: [

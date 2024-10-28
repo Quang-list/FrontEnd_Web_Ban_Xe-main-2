@@ -47,7 +47,8 @@
             <li class="nav-item" *ngIf="isLogin">
               <button class="nav-link btn btn-link" (click)="onLogout()">Logout</button>
             </li>
-            <li class="nav-item" *ngIf="isLogin" (mouseenter)="isDropdownVisible = true" (mouseleave)="isDropdownVisible = false">
+            <li class="nav-item" *ngIf="isLogin" (mouseenter)="isDropdownVisible = true"
+              (mouseleave)="isDropdownVisible = false">
               <span class="nav-link">Hello, {{ userName }}</span>
               <ul class="dropdown-menu" *ngIf="isDropdownVisible">
                 <li class="dropdown-item">

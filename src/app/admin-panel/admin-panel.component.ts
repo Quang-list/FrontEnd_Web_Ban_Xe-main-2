@@ -18,3 +18,4 @@ export class AdminPanelComponent {
     this.router.navigate(['/admin-login']);
   }
 }
+
