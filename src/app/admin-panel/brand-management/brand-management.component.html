@@ -31,4 +31,33 @@
             </button>
         </div>
     </div>
+    <div class="container">
+        <h1>Quản lý Thương Hiệu</h1>
+
+        <form [formGroup]="brandForm" (ngSubmit)="onCreateBrand()">
+            <div class="form-group">
+                <label for="brandName">Tên Thương Hiệu:</label>
+                <input id="brandName" formControlName="brandName" />
+                <div *ngIf="brandForm.get('brandName')?.invalid && brandForm.get('brandName')?.touched">
+                    <small style="color: red;">Vui lòng điền tên thương hiệu.</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="origin">Nguồn Gốc:</label>
+                <input id="origin" formControlName="origin" />
+                <div *ngIf="brandForm.get('origin')?.invalid && brandForm.get('origin')?.touched">
+                    <small style="color: red;">Vui lòng điền nguồn gốc thương hiệu.</small>
+                </div>
+            </div>
+            <div class="text-center"> <!-- Thêm div này để căn giữa nút -->
+                <button type="submit">Tạo Thương Hiệu</button>
+            </div>
+
+        </form>
+
+        <div *ngIf="registerMessage">
+            <p style="color: green;">{{ registerMessage }}</p>
+        </div>
+    </div>
 </div>

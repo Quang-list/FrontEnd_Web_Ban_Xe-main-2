@@ -10,7 +10,7 @@ const api = 'https://localhost:5001/api';
   providedIn: 'root'
 })
 export class ProductsService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getProducts(): Observable<Products[]> {
     return this.http.get<Products[]>(`${api}/Products/GetAllProduct`);
@@ -18,7 +18,7 @@ export class ProductsService {
 
   getListPrice(minPrice: number, maxPrice: number, brandsName: string): Observable<ProductResponse> {
     console.log('Min Price:', minPrice, 'Max Price:', maxPrice);
-    
+
     const params = new HttpParams()
       .set('minPrice', minPrice.toString())
       .set('maxPrice', maxPrice.toString())

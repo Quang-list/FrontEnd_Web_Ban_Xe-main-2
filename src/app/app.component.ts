@@ -14,7 +14,10 @@ export class AppComponent implements OnInit {
     '/admin-login',
     '/register',
     '/admin-panel',
-    '/employee'
+    '/employee',
+    '/products/add',
+    '/create-type',
+    '/product-list',
   ];
 
   constructor(private router: Router) { }

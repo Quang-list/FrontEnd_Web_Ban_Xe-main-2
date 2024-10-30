@@ -1,29 +1,17 @@
-.create-btn {
-    margin-top: 1rem;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    display: block;
-    width: 50%;
-    background-color: #ffc107;
-    color: #343a40;
-    border: none;
-    border-radius: 5px;
+.container {
+    max-width: 80%;
+    margin: auto;
 }
 
-.alert {
-    font-size: 1rem;
+.table {
+    margin-top: 20px;
+    background-color: #fff;
 }
 
-
-h1 {
-    margin-top: 30px;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #343a40;
-    margin-bottom: 1rem;
+th,
+td {
     text-align: center;
-    /* Căn giữa chữ */
+    vertical-align: middle;
 }
 
 // Salibar
@@ -67,4 +55,14 @@ h1 {
     margin-bottom: 10px;
     /* Khoảng cách dưới */
     letter-spacing: 1px;
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 1rem;
+    text-align: center;
+    /* Căn giữa chữ */
 }

@@ -1,0 +1,91 @@
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-dark border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading text-white">Admin Panel</div>
+        <div class="list-group list-group-flush">
+            <button (click)="navigateTo('employees/create')"
+                class="list-group-item list-group-item-action bg-dark text-white">
+                <i class="bi bi-person-plus-fill"></i> Tạo Nhân Viên
+            </button>
+            <button (click)="navigateTo('employees')" class="list-group-item list-group-item-action bg-dark text-white">
+                <i class="bi bi-people-fill"></i> Danh Sách Nhân Viên
+            </button>
+            <button (click)="navigateTo('products/add')"
+                class="list-group-item list-group-item-action bg-dark text-white">
+                <i class="bi bi-box"></i> Thêm Sản Phẩm
+            </button>
+            <button (click)="navigateTo('admin-panel/manage-brands')"
+                class="list-group-item list-group-item-action bg-dark text-white">
+                <i class="bi bi-tag"></i> Thêm Thương Hiệu
+            </button>
+            <button (click)="navigateTo('create-type')"
+                class="list-group-item list-group-item-action bg-dark text-white">
+                <i class="bi bi-tags-fill"></i> Type
+            </button>
+            <button (click)="navigateTo('product-list')"
+                class="list-group-item list-group-item-action bg-dark text-white">
+                <i class="bi bi-boxes"></i> Danh Sách Sản Phẩm
+            </button>
+            <button (click)="onLogout()" class="list-group-item list-group-item-action bg-dark text-white">
+                <i class="bi bi-box-arrow-right"></i> Đăng Xuất
+            </button>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <h2 class="mt-4">Thêm Sản Phẩm</h2>
+        <form [formGroup]="productForm" (ngSubmit)="onCreate()">
+            <div>
+                <label for="productName">Tên sản phẩm</label>
+                <input id="productName" formControlName="productName" required>
+            </div>
+
+            <div>
+                <label for="description">Mô tả</label>
+                <textarea id="description" formControlName="description" required></textarea>
+            </div>
+
+            <div>
+                <label for="price">Giá</label>
+                <input id="price" formControlName="price" type="number" required>
+            </div>
+
+            <div>
+                <label for="priceHasDecreased">Giá đã giảm</label>
+                <input id="priceHasDecreased" formControlName="priceHasDecreased" type="number" required>
+            </div>
+
+            <div>
+                <label for="quantity">Số lượng</label>
+                <input id="quantity" formControlName="quantity" type="number" required>
+            </div>
+
+            <div>
+                <label for="brandId">ID Thương hiệu</label>
+                <input id="brandId" formControlName="brandId" type="number" required>
+            </div>
+
+            <div>
+                <label for="typeId">ID Loại sản phẩm</label>
+                <input id="typeId" formControlName="typeId" type="number" required>
+            </div>
+
+            <div>
+                <label for="colors">Màu sắc</label>
+                <input id="colors" formControlName="colors" required>
+            </div>
+
+            <div>
+                <label for="image">Hình ảnh</label>
+                <input id="image" type="file" (change)="onFileChange($event)" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary create-btn mx-auto d-block">
+                <i class="bi bi-plus-circle"></i> Thêm Sản Phẩm
+            </button>
+        </form>
+
+        <div *ngIf="registerMessage">{{ registerMessage }}</div>
+    </div>
+</div>

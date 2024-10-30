@@ -1,0 +1,127 @@
+// Salibar
+#wrapper {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    /* Xóa khoảng cách thừa */
+}
+
+
+#sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    flex: 1;
+}
+
+.list-group-item {
+    transition: background-color 0.2s;
+}
+
+.list-group-item:hover {
+    background-color: #1b1e21;
+}
+
+.sidebar-heading {
+    font-size: 1.5rem;
+    /* Kích thước chữ lớn hơn */
+    font-weight: bold;
+    /* Làm đậm chữ */
+    text-align: center;
+    /* Canh giữa */
+    padding: 15px;
+    /* Thêm khoảng cách xung quanh */
+    background-color: #343a40;
+    /* Màu nền tương tự như sidebar */
+    border-bottom: 2px solid #727880;
+    /* Đường viền dưới màu xanh dương */
+    margin-bottom: 10px;
+    /* Khoảng cách dưới */
+    letter-spacing: 1px;
+}
+
+
+
+.container-fluid {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="file"] {
+    border: 1px solid #ced4da;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.create-btn {
+    margin-top: 20px;
+}
+
+div.registerMessage {
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+}

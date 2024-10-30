@@ -10,6 +10,22 @@
             <button (click)="navigateTo('employees')" class="list-group-item list-group-item-action bg-dark text-white">
                 <i class="bi bi-people-fill"></i> Danh Sách Nhân Viên
             </button>
+            <button (click)="navigateTo('products/add')"
+                class="list-group-item list-group-item-action bg-dark text-white">
+                <i class="bi bi-box"></i> Thêm Sản Phẩm
+            </button>
+            <button (click)="navigateTo('admin-panel/manage-brands')"
+                class="list-group-item list-group-item-action bg-dark text-white">
+                <i class="bi bi-tag"></i> Thêm Thương Hiệu
+            </button>
+            <button (click)="navigateTo('create-type')"
+                class="list-group-item list-group-item-action bg-dark text-white">
+                <i class="bi bi-tags-fill"></i> Type
+            </button>
+            <button (click)="navigateTo('product-list')"
+                class="list-group-item list-group-item-action bg-dark text-white">
+                <i class="bi bi-boxes"></i> Danh Sách Sản Phẩm
+            </button>
             <button (click)="onLogout()" class="list-group-item list-group-item-action bg-dark text-white">
                 <i class="bi bi-box-arrow-right"></i> Đăng Xuất
             </button>
@@ -26,24 +42,65 @@
         <form [formGroup]="employeeForm" (ngSubmit)="onCreate()">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Tên" formControlName="name" />
+                <div *ngIf="employeeForm.get('name')?.touched && employeeForm.get('name')?.hasError('required')"
+                    class="text-danger">
+                    Vui lòng điền tên
+                </div>
             </div>
+
             <div class="form-group">
                 <input type="email" class="form-control" placeholder="Email" formControlName="email" />
+                <div *ngIf="employeeForm.get('email')?.hasError('required')" class="text-danger">
+                    Vui lòng điền email
+                </div>
+                <div *ngIf="employeeForm.get('email')?.hasError('email')" class="text-danger">
+                    Điền đúng email
+                </div>
             </div>
             <div class="form-group">
                 <input type="password" class="form-control" placeholder="Mật Khẩu" formControlName="password" />
+                <div *ngIf="employeeForm.get('password')?.touched && employeeForm.get('password')?.hasError('required')"
+                    class="text-danger">
+                    Vui lòng điền mật khẩu
+                </div>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Địa Chỉ" formControlName="address" />
+                <div *ngIf="employeeForm.get('address')?.touched && employeeForm.get('address')?.hasError('required')"
+                    class="text-danger">
+                    Vui lòng điền địa chỉ
+                </div>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Thành Phố" formControlName="city" />
+                <div *ngIf="employeeForm.get('city')?.touched && employeeForm.get('city')?.hasError('required')"
+                    class="text-danger">
+                    Vui lòng điền thành phố
+                </div>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Số Điện Thoại" formControlName="phone" />
+                <div *ngIf="employeeForm.get('phone')?.touched && employeeForm.get('phone')?.hasError('required')"
+                    class="text-danger">
+                    Vui lòng điền số điện thoại
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Giới Tính</label>
+                <div>
+                    <label><input type="radio" formControlName="gender" value="Male" /> Nam</label>
+                    <label><input type="radio" formControlName="gender" value="Female" /> Nữ</label>
+                </div>
+                <div *ngIf="employeeForm.get('gender')?.hasError('required')" class="text-danger">
+                    Vui lòng chọn giới tính
+                </div>
             </div>
             <div class="form-group">
                 <input type="date" class="form-control" formControlName="dateOfBirth" />
+                <div *ngIf="employeeForm.get('dateOfBirth')?.touched && employeeForm.get('dateOfBirth')?.hasError('required')"
+                    class="text-danger">
+                    Vui lòng chọn ngày sinh
+                </div>
             </div>
             <button type="submit" class="btn btn-primary create-btn mx-auto d-block">
                 <i class="bi bi-person-plus"></i> Tạo Nhân Viên

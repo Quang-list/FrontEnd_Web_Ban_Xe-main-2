@@ -22,10 +22,14 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { FormsModule } from '@angular/forms';
 import { AddressComponent } from './components/address/address.component';
-import { RegisterComponent } from './components/register/register.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { CreateEmployeeComponent } from './admin-panel/create-employee/create-employee.component';
 import { EmployeeListComponent } from './admin-panel/employee-list/employee-list.component';
+import { AddProductComponent } from './admin-panel/add-product/add-product.component';
+import { BrandManagementComponent } from './admin-panel/brand-management/brand-management.component';
+import { CreateTypeComponent } from './admin-panel/create-type/create-type.component';
+import { ProductListComponent } from './admin-panel/product-list/product-list.component';
+import { UpdateProductComponent } from './admin-panel/update-product/update-product.component';
 
 export function jwtOptionsFactory() {
   return {
@@ -54,11 +58,14 @@ export function jwtOptionsFactory() {
     MyProfileComponent,
     AboutComponent,
     AddressComponent,
-    RegisterComponent,
     AdminLoginComponent,
     CreateEmployeeComponent,
     EmployeeListComponent,
-
+    AddProductComponent,
+    BrandManagementComponent,
+    CreateTypeComponent,
+    ProductListComponent,
+    UpdateProductComponent,
   ],
 
   imports: [

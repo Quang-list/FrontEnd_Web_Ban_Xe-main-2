@@ -1,0 +1,64 @@
+<div class="container mt-4">
+    <h1>Cập Nhật Sản Phẩm</h1>
+    <form [formGroup]="productForm" (ngSubmit)="updateProduct()">
+        <div class="form-group">
+            <label for="productName">Tên Sản Phẩm</label>
+            <input type="text" id="productName" formControlName="productName" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="price">Giá</label>
+            <input type="number" id="price" formControlName="price" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="priceHasDecreased">Giá Đã Giảm</label>
+            <input type="number" id="priceHasDecreased" formControlName="priceHasDecreased" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Mô Tả</label>
+            <textarea id="description" formControlName="description" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Số Lượng</label>
+            <input type="number" id="quantity" formControlName="quantity" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="image">Hình Ảnh</label>
+            <input type="text" id="image" formControlName="image" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="create">Ngày Tạo</label>
+            <input type="datetime-local" id="create" formControlName="create" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="brandId">Thương Hiệu (ID)</label>
+            <input type="number" id="brandId" formControlName="brandId" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="typeId">Loại Sản Phẩm (ID)</label>
+            <input type="number" id="typeId" formControlName="typeId" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="colors">Màu Sắc</label>
+            <input type="text" id="colors" formControlName="colors" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="status">Trạng Thái</label>
+            <input type="number" id="status" formControlName="status" class="form-control">
+        </div>
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary">Cập Nhật</button>
+            <button type="button" class="btn btn-primary" (click)=" cancel()"
+                style="background-color: rgb(255, 0, 13);">Hủy</button>
+        </div>
+    </form>
+</div>

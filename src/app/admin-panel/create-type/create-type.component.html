@@ -31,4 +31,42 @@
             </button>
         </div>
     </div>
+
+    <div class="container">
+        <h1>Tạo Mới Type</h1>
+
+        <form [formGroup]="typeForm" (ngSubmit)="onCreateType()">
+            <div class="form-group">
+                <label for="name">Tên:</label>
+                <input id="name" formControlName="name" />
+                <div *ngIf="typeForm.get('name')?.invalid && typeForm.get('name')?.touched">
+                    <small style="color: red;">Vui lòng điền tên.</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Mô Tả:</label>
+                <input id="description" formControlName="description" />
+                <div *ngIf="typeForm.get('description')?.invalid && typeForm.get('description')?.touched">
+                    <small style="color: red;">Vui lòng điền mô tả cho Type.</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="productType">Loại Sản Phẩm:</label>
+                <input id="productType" formControlName="productType" />
+                <div *ngIf="typeForm.get('productType')?.invalid && typeForm.get('productType')?.touched">
+                    <small style="color: red;">Vui lòng chọn loại sản phẩm.</small>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit">Tạo Mới Type</button>
+            </div>
+        </form>
+
+        <div *ngIf="registerMessage">
+            <p style="color: green;">{{ registerMessage }}</p>
+        </div>
+    </div>
 </div>
